@@ -1,0 +1,29 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  padding: 25px;
+  margin: 20px;
+  border: 2px solid rgb(92, 168, 212);
+}
+
+.article-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: rgb(2, 66, 82);
+}
+
+.article-body {
+  font-size: 14px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.article-id {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
