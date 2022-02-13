@@ -31,7 +31,7 @@ export default function Articles({ theme }: ArticleProps) {
         "https://jsonplaceholder.typicode.com/posts"
       );
       const data = await response.json();
-      setArticles(data.slice(0, Math.floor(Math.random() * 6) + 1));
+      setArticles(data.slice(5, 8));
     };
 
     fetchData();
