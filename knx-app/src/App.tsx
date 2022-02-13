@@ -31,6 +31,9 @@ const App = () => (
           <li>
             <Link to="/sports">Sports</Link>
           </li>
+          <li>
+            <Link to="/about-us">About us</Link>
+          </li>
         </SharedHeader>
       </React.Suspense>
 
@@ -75,7 +78,20 @@ const App = () => (
             </React.Suspense>
           }
         />
-        <Route path="about" element={<div />} />
+        <Route
+          path="about-us"
+          element={
+            <div
+              style={{
+                height: "600px",
+                textAlign: "center",
+                margin: "auto",
+              }}
+            >
+              We are awesome!
+            </div>
+          }
+        />
       </Routes>
 
       <React.Suspense fallback="Loading Footer">
