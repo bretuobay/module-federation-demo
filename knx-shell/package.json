@@ -1,16 +1,16 @@
 {
-  "name": "knx-footer",
+  "name": "knx-shell",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
-    "build:start": "cd dist && PORT=8082 npx serve",
+    "build:start": "cd dist && PORT=8080 npx serve",
     "start": "webpack serve --open --mode development",
     "start:live": "webpack serve --open --mode development --live-reload --hot"
   },
   "license": "MIT",
   "author": {
-    "name": "Festus Yeboah",
+    "name": "KONUX Frontend",
     "email": "engineering@konux.de"
   },
   "devDependencies": {
@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "scriptjs": "^2.5.9"
   }
 }

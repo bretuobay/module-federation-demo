@@ -59,8 +59,6 @@ const data = [
 ];
 
 export default function LineBarAreaComposedChart() {
-  const demoUrl = "https://codesandbox.io/s/simple-composed-chart-h9zif";
-
   return (
     <div style={{ width: "500px", height: "300px", padding: "20px" }}>
       <ResponsiveContainer width="100%" height="100%">
