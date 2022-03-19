@@ -1,9 +1,15 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 58px;
+}
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: red;
+  background-color: white;
 }
 
 li {
@@ -12,12 +18,15 @@ li {
 
 li a {
   display: block;
-  color: white;
+  color: #1a1a1a;
+  /* color: #08c; */
   text-align: center;
-  padding: 14px 16px;
+  padding: 5px 16px;
   text-decoration: none;
+  border-radius: 4px;
+  align-items: center;
 }
 
 li a:hover {
-  background-color: #111;
+  background-color: #eef2f5;
 }

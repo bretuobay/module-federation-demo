@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles/Header.css";
+import ImageLogo from "./logo.png";
 
+const svgStyles = { width: "100px", height: "50px" } as const;
 function Header({
   children,
   theme,
@@ -10,6 +12,7 @@ function Header({
 }) {
   return (
     <header className="header" style={{ ...theme }}>
+      <img src={ImageLogo} style={{ ...svgStyles }} />
       <ul style={{ ...theme }}>{children}</ul>
     </header>
   );

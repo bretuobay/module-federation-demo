@@ -16,26 +16,20 @@ const App = () => (
     <React.Suspense fallback="Loading Header">
       <SharedHeader>
         <li>
-          <Link to="/general-news">General News</Link>
+          <Link to="/dashboard">Dashboard</Link>
         </li>
         <li>
-          <Link to="/fashion">Fashion</Link>
+          <Link to="/my-region">My region</Link>
         </li>
         <li>
-          <Link to="/culture">Culture</Link>
-        </li>
-        <li>
-          <Link to="/entertainment">Politics</Link>
-        </li>
-        <li>
-          <Link to="/sports">Sports</Link>
+          <Link to="/maintenance">Maintenance</Link>
         </li>
       </SharedHeader>
     </React.Suspense>
     <div className="container">
       <Routes>
         <Route
-          path="/general-news"
+          path="/dashboard"
           element={
             <React.Suspense fallback="loading...">
               <Articles theme={{ backgroundColor: "#f5f5f5" }} />
@@ -43,7 +37,7 @@ const App = () => (
           }
         />
         <Route
-          path="/fashion"
+          path="/my-region"
           element={
             <React.Suspense fallback="loading...">
               <Articles theme={{ backgroundColor: "#a2d2ff" }} />
@@ -51,30 +45,13 @@ const App = () => (
           }
         />
         <Route
-          path="/culture"
+          path="/maintenance"
           element={
             <React.Suspense fallback="loading...">
               <Articles theme={{ backgroundColor: "#f9c74f" }} />
             </React.Suspense>
           }
         />
-        <Route
-          path="/entertainment"
-          element={
-            <React.Suspense fallback="loading...">
-              <Articles theme={{ backgroundColor: "#4d908e" }} />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="/sports"
-          element={
-            <React.Suspense fallback="loading...">
-              <Articles theme={{ backgroundColor: "#55a630" }} />
-            </React.Suspense>
-          }
-        />
-        <Route path="about" element={<div />} />
       </Routes>
     </div>
     <React.Suspense fallback="Loading Footer">

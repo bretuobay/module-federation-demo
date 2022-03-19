@@ -8,16 +8,6 @@ type Article = {
   body: string;
 };
 
-// type Article = {
-//   id: string;
-//   title: string;
-//   description: string;
-//   date: string;
-//   author: string;
-//   picture: string;
-//   content: string;
-// };
-
 type ArticleProps = {
   theme?: React.CSSProperties;
 };
