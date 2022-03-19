@@ -2,7 +2,8 @@ import React from "react";
 import "./styles/Header.css";
 import ImageLogo from "./logo.png";
 
-const svgStyles = { width: "100px", height: "50px" } as const;
+const svgStyles = { maxWidth: "100px", maxHeight: "50px" } as const;
+
 function Header({
   children,
   theme,

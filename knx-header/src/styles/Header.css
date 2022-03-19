@@ -30,3 +30,9 @@ li a {
 li a:hover {
   background-color: #eef2f5;
 }
+
+svg {
+  object-fit: contain;
+  height: inherit;
+  width: inherit;
+}
