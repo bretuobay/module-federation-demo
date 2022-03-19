@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Articles from "./components/Articles";
 import Histogram from "./components/Histogram";
+import LineBarAreaComposedChart from "./components/LineBarAreaComposedChart";
 
 import "./index.css";
 
@@ -12,8 +13,9 @@ const App = () => (
     </div>
 
     <Histogram />
-
+    <LineBarAreaComposedChart />
     <Articles />
   </div>
 );
+
 ReactDOM.render(<App />, document.getElementById("app"));

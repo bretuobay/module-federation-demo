@@ -17,29 +17,21 @@ const App = () => (
       <React.Suspense fallback="Loading Header">
         <SharedHeader theme={{ backgroundColor: "#1EC0E3;" }}>
           <li>
-            <Link to="/general-news">General News</Link>
+            <Link to="/product2-dashboard">Product 2 dashboard</Link>
           </li>
           <li>
-            <Link to="/fashion">Fashion</Link>
+            <Link to="/product2-regions">Product 2 regions</Link>
           </li>
+
           <li>
-            <Link to="/culture">Culture</Link>
-          </li>
-          <li>
-            <Link to="/entertainment">Politics</Link>
-          </li>
-          <li>
-            <Link to="/sports">Sports</Link>
-          </li>
-          <li>
-            <Link to="/about-us">About us</Link>
+            <Link to="/product2-miscellaneous">Product 2 miscellaneous</Link>
           </li>
         </SharedHeader>
       </React.Suspense>
 
       <Routes>
         <Route
-          path="/general-news"
+          path="/product2-dashboard"
           element={
             <React.Suspense fallback="loading...">
               <Articles theme={{ backgroundColor: "#f5f5f5" }} />
@@ -47,37 +39,23 @@ const App = () => (
           }
         />
         <Route
-          path="/fashion"
+          path="/product2-regions"
           element={
             <React.Suspense fallback="loading...">
               <Articles theme={{ backgroundColor: "#a2d2ff" }} />
             </React.Suspense>
           }
         />
+
         <Route
-          path="/culture"
-          element={
-            <React.Suspense fallback="loading...">
-              <Articles theme={{ backgroundColor: "#f9c74f" }} />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="/entertainment"
+          path="/product2-miscellaneous"
           element={
             <React.Suspense fallback="loading...">
               <Articles theme={{ backgroundColor: "#4d908e" }} />
             </React.Suspense>
           }
         />
-        <Route
-          path="/sports"
-          element={
-            <React.Suspense fallback="loading...">
-              <Articles theme={{ backgroundColor: "#55a630" }} />
-            </React.Suspense>
-          }
-        />
+
         <Route
           path="about-us"
           element={

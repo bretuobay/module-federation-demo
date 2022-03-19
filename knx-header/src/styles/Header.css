@@ -3,6 +3,9 @@
   flex-direction: row;
   align-items: center;
   height: 58px;
+  border-bottom: 2px solid #eef2f5;
+  box-shadow: #eef2f5;
+  width: 100%;
 }
 ul {
   list-style-type: none;

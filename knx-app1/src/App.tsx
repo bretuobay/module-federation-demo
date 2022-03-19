@@ -13,6 +13,11 @@ const Articles = React.lazy(() => import("knx_components/Articles"));
 
 const Histogram = React.lazy(() => import("knx_components/Histogram"));
 
+// Load LineBarAreaComposedChart
+const LineBarAreaComposedChart = React.lazy(
+  () => import("knx_components/LineBarAreaComposedChart")
+);
+
 const App = () => (
   <React.Fragment>
     <React.Suspense fallback="Loading Header">
@@ -33,10 +38,15 @@ const App = () => (
         <Route
           path="/dashboard"
           element={
-            <React.Suspense fallback="loading...">
-              <Histogram />
-              {/* <Articles theme={{ backgroundColor: "#f5f5f5" }} /> */}
-            </React.Suspense>
+            <>
+              <React.Suspense fallback="loading...">
+                <Histogram />
+              </React.Suspense>
+
+              <React.Suspense fallback="loading...">
+                <LineBarAreaComposedChart />
+              </React.Suspense>
+            </>
           }
         />
         <Route
