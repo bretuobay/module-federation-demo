@@ -46,6 +46,9 @@ module.exports = {
       remotes: {},
       exposes: {
         "./Articles": "./src/components/Articles",
+        "./Histogram": "./src/components/Histogram",
+        "./LineBarAreaComposedChart":
+          "./src/components/LineBarAreaComposedChart",
       },
       shared: {
         ...deps,

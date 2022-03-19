@@ -11,6 +11,8 @@ const SharedFooter = React.lazy(() => import("knx_footer/Footer"));
 
 const Articles = React.lazy(() => import("knx_components/Articles"));
 
+const Histogram = React.lazy(() => import("knx_components/Histogram"));
+
 const App = () => (
   <React.Fragment>
     <React.Suspense fallback="Loading Header">
@@ -32,7 +34,8 @@ const App = () => (
           path="/dashboard"
           element={
             <React.Suspense fallback="loading...">
-              <Articles theme={{ backgroundColor: "#f5f5f5" }} />
+              <Histogram />
+              {/* <Articles theme={{ backgroundColor: "#f5f5f5" }} /> */}
             </React.Suspense>
           }
         />
