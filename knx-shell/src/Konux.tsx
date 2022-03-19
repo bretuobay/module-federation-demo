@@ -3,16 +3,16 @@ import ReactDOM from "react-dom";
 
 import importRemote from "./importRemote";
 
-// Should we allow props ?
+// Props will probably have to handle authentication tokens etc ...
 const Shell = ({ widget, ...props }) => {
-  const url = "http://local.fuse-tenant1.mt-sb.konux-dev.de:3000";
-  const Component = React.lazy(() => importRemote(url, "olympui", widget));
+  const url = "http://localhost:8083";
+
+  const Component = React.lazy(() =>
+    importRemote(url, "knx_components", widget)
+  );
 
   return (
     <div className="olymp-App">
-      <React.Suspense fallback={"LOADING..."}>
-        <Component {...props} />
-      </React.Suspense>
       <div
         style={{
           backgroundColor: "navy",
@@ -23,8 +23,11 @@ const Shell = ({ widget, ...props }) => {
           fontWeight: "bold",
         }}
       >
-        KONUX
+        I am a widget from KONUX
       </div>
+      <React.Suspense fallback={"LOADING..."}>
+        <Component {...props} />
+      </React.Suspense>
     </div>
   );
 };
