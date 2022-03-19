@@ -42,7 +42,7 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "knx_shell",
+      name: "knx_app1",
       filename: "remoteEntry.js",
       remotes: {
         knx_header: "knx_header@http://localhost:8081/remoteEntry.js",
