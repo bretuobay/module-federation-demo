@@ -9,6 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import ErrorBoundary from "./ErrorBoundary";
 
 const data = [
   {

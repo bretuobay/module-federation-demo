@@ -49,6 +49,7 @@ module.exports = {
         "./Histogram": "./src/components/Histogram",
         "./LineBarAreaComposedChart":
           "./src/components/LineBarAreaComposedChart",
+        "./ErrorBoundary": "./src/components/ErrorBoundary",
       },
       shared: {
         ...deps,

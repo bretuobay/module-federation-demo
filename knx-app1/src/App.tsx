@@ -2,9 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route, Link } from "react-router-dom";
-import ErrorBoundary from "./ErrorBoundary";
 
 import "./index.css";
+
+const ErrorBoundary = React.lazy(() => import("knx_components/ErrorBoundary"));
 
 const SharedHeader = React.lazy(() => import("knx_header/Header"));
 

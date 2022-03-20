@@ -2,6 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import importRemote from "./importRemote";
+import ErrorBoundary from "./ErrorBoundary";
+
+const genKey = () => (Math.random() + 1).toString(36).substring(7);
 
 // Props will probably have to handle authentication tokens etc ...
 const Shell = ({ widget, ...props }) => {
@@ -25,7 +28,9 @@ const Shell = ({ widget, ...props }) => {
         I am a widget from KONUX
       </div>
       <React.Suspense fallback={"LOADING..."}>
-        <Component {...props} />
+        <ErrorBoundary key={genKey()}>
+          <Component {...props} />
+        </ErrorBoundary>
       </React.Suspense>
     </div>
   );
