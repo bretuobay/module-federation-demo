@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route, Link } from "react-router-dom";
+import ErrorBoundary from "./ErrorBoundary";
 
 import "./index.css";
 
@@ -40,11 +41,15 @@ const App = () => (
           element={
             <div className="dashboard">
               <React.Suspense fallback="loading...">
-                <Histogram />
+                <ErrorBoundary>
+                  <Histogram />
+                </ErrorBoundary>
               </React.Suspense>
 
               <React.Suspense fallback="loading...">
-                <LineBarAreaComposedChart />
+                <ErrorBoundary>
+                  <LineBarAreaComposedChart />
+                </ErrorBoundary>
               </React.Suspense>
             </div>
           }
