@@ -8,3 +8,9 @@ body {
   margin-top: 20px;
   min-height: 600px;
 }
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

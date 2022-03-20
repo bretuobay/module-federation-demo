@@ -10,15 +10,28 @@
         font-size: 20px;
         color: red;
       }
+
+      .konux-widgets {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 10px;
+      }
     </style>
   </head>
   <body>
     <div class="big-network">
       <h1>Big mega train network platform</h1>
     </div>
-    <!-- <div id="app"></div> -->
-    <div id="widget1"></div>
-    <div id="widget2"></div>
+    <div class="konux-widgets">
+      <div id="widget1"></div>
+      <div id="widget2"></div>
+    </div>
     <script defer="defer" src="http://localhost:9000/main.js"></script>
+    <script>
+      window.onload = function () {
+        Konux.render("LineBarAreaComposedChart", "widget2", {});
+      };
+    </script>
   </body>
 </html>

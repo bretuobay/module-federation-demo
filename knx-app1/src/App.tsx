@@ -38,7 +38,7 @@ const App = () => (
         <Route
           path="/dashboard"
           element={
-            <>
+            <div className="dashboard">
               <React.Suspense fallback="loading...">
                 <Histogram />
               </React.Suspense>
@@ -46,7 +46,7 @@ const App = () => (
               <React.Suspense fallback="loading...">
                 <LineBarAreaComposedChart />
               </React.Suspense>
-            </>
+            </div>
           }
         />
         <Route

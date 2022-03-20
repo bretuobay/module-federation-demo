@@ -15,8 +15,7 @@ const Shell = ({ widget, ...props }) => {
     <div className="olymp-App">
       <div
         style={{
-          backgroundColor: "navy",
-          width: "100%",
+          backgroundColor: "#1EC0E3",
           height: 20,
           color: "white",
           fontSize: 20,
